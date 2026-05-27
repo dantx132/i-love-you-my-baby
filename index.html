@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Livro de Memórias</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="corner-nav">
+      <button class="tab active" data-tab="galeria">Galeria</button>
+      <button class="tab" data-tab="presente">Presente</button>
+      <button class="tab" data-tab="datas">Datas</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="galeria" class="tab-content active">
+      <div class="gallery-book">
+        <div class="book">
+          <div class="book-spine"></div>
+          <div class="book-pages" id="book-pages"></div>
+          <div class="page-turner" aria-hidden="true">
+            <div class="page-turner-face front"></div>
+            <div class="page-turner-face back"></div>
+          </div>
+        </div>
+      </div>
+      <div class="book-controls">
+        <button id="prev-page" class="book-button" disabled>Anterior</button>
+        <button id="next-page" class="book-button">Próxima</button>
+      </div>
+    </section>
+
+    <section id="presente" class="tab-content">
+      <h1>Presentes</h1>
+      <p>Dois livros com presentes especiais para vocês.</p>
+      
+      <div class="presentes-books-container">
+        <!-- Livro 1: Presentes de Dante para Duda -->
+        <div class="presentes-book-section">
+          <h2>Presentes de Dante para Duda ❤️</h2>
+          <div class="gallery-book">
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-pages" id="book-pages-dante"></div>
+              <div class="page-turner" id="page-turner-dante" aria-hidden="true">
+                <div class="page-turner-face front"></div>
+                <div class="page-turner-face back"></div>
+              </div>
+            </div>
+          </div>
+          <div class="book-controls">
+            <button id="prev-page-dante" class="book-button" disabled>Anterior</button>
+            <button id="next-page-dante" class="book-button">Próxima</button>
+          </div>
+        </div>
+
+        <!-- Livro 2: Presentes de Duda para Dante -->
+        <div class="presentes-book-section">
+          <h2>Presentes de Duda para Dante 💙</h2>
+          <div class="gallery-book">
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-pages" id="book-pages-duda"></div>
+              <div class="page-turner" id="page-turner-duda" aria-hidden="true">
+                <div class="page-turner-face front"></div>
+                <div class="page-turner-face back"></div>
+              </div>
+            </div>
+          </div>
+          <div class="book-controls">
+            <button id="prev-page-duda" class="book-button" disabled>Anterior</button>
+            <button id="next-page-duda" class="book-button">Próxima</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="datas" class="tab-content">
+      <h1>Datas</h1>
+      <p>Datas especiais registradas no livro.</p>
+      <div class="card-list" id="dates-list">
+        <div class="card card-date">
+          <strong>Primeiro eu te amo</strong>
+          <span>16/02/2026</span>
+        </div>
+        <div class="card card-date">
+          <strong>Primeiro beijo/primeiro encontro</strong>
+          <span>14/02/2026</span>
+        </div>
+        <div class="card card-date">
+          <strong>Pedido de namoro</strong>
+          <span>28/02/2026</span>
+        </div>
+        <div class="card card-date">
+          <strong>Primeiro beijo de língua</strong>
+          <span>14/03/2026</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal para visualizar fotos em tela cheia -->
+  <div id="image-modal" class="image-modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <img id="modal-image" src="" alt="Foto em tela cheia" />
+    </div>
+  </div>
+
+  <script src="gallery-list.js"></script>
+  <script src="presents-list.js"></script>
+  <script src="presentes-dante-para-duda-list.js"></script>
+  <script src="presentes-duda-para-dante-list.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
